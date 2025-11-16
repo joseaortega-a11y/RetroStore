@@ -9,8 +9,8 @@ package modelo;
  * @author Josea
  */
 public class Sesion {
-
     public static Usuario usuarioActual;
     public static Carrito carrito = new Carrito();
     public static Favoritos favoritos = new Favoritos();
 }
+

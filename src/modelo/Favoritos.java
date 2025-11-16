@@ -3,25 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-import java.util.ArrayList;
-import java.util.List;
-/**
- *
- * @author Josea
- */
+import java.util.HashSet;
+import java.util.Set;
+
 public class Favoritos {
 
-    private List<Producto> lista = new ArrayList<>();
+    private Set<Producto> favoritos = new HashSet<>();
 
     public void agregar(Producto p) {
-        if (!lista.contains(p)) lista.add(p);
+        favoritos.add(p);
     }
 
     public void eliminar(Producto p) {
-        lista.remove(p);
+        favoritos.remove(p);
     }
 
-    public List<Producto> getLista() {
-        return lista;
+    public Set<Producto> getFavoritos() {
+        return favoritos;
     }
 }
+

@@ -8,14 +8,15 @@ package modelo;
  *
  * @author Josea
  */
-
 public class Usuario {
 
     private String id;
     private String correo;
     private String apodo;
     private String contrasena;
-    private String rol; // USER o ADMIN
+    private String rol;
+
+    public Usuario() {}
 
     public Usuario(String id, String correo, String apodo, String contrasena, String rol) {
         this.id = id;
@@ -25,26 +26,15 @@ public class Usuario {
         this.rol = rol;
     }
 
-    public Usuario() {}
-
     public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
-
     public String getCorreo() { return correo; }
-    public void setCorreo(String correo) { this.correo = correo; }
-
     public String getApodo() { return apodo; }
-    public void setApodo(String apodo) { this.apodo = apodo; }
-
     public String getContrasena() { return contrasena; }
-    public void setContrasena(String contrasena) { this.contrasena = contrasena; }
-
     public String getRol() { return rol; }
+
+    public void setId(String id) { this.id = id; }
+    public void setCorreo(String correo) { this.correo = correo; }
+    public void setApodo(String apodo) { this.apodo = apodo; }
+    public void setContrasena(String contrasena) { this.contrasena = contrasena; }
     public void setRol(String rol) { this.rol = rol; }
-
-    @Override
-    public String toString() {
-        return id + ";" + correo + ";" + apodo + ";" + contrasena + ";" + rol;
-    }
 }
-

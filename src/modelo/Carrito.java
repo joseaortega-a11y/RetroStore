@@ -3,41 +3,39 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-
+import java.util.HashMap;
+import java.util.Map;
 /**
  *
  * @author Josea
  */
 
 
+
 public class Carrito {
 
-    private List<Producto> productos = new ArrayList<>();
-    private Stack<Producto> pilaUndo = new Stack<>(); // para deshacer eliminaciones
+    private Map<Producto, Integer> productos = new HashMap<>();
 
     public void agregarProducto(Producto p) {
-        productos.add(p);
+        productos.put(p, productos.getOrDefault(p, 0) + 1);
     }
 
     public void eliminarProducto(Producto p) {
-        productos.remove(p);
-        pilaUndo.push(p);
-    }
-
-    public boolean deshacerEliminacion() {
-        if (pilaUndo.isEmpty()) return false;
-        productos.add(pilaUndo.pop());
-        return true;
+        if (productos.containsKey(p)) {
+            int cant = productos.get(p);
+            if (cant == 1) productos.remove(p);
+            else productos.put(p, cant - 1);
+        }
     }
 
     public double calcularTotal() {
-        return productos.stream().mapToDouble(Producto::getPrecio).sum();
+        double total = 0;
+        for (Producto p : productos.keySet())
+            total += p.getPrecio() * productos.get(p);
+        return total;
     }
 
-    public List<Producto> getProductos() {
+    public Map<Producto, Integer> getProductos() {
         return productos;
     }
 

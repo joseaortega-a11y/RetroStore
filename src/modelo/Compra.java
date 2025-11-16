@@ -5,27 +5,23 @@
 package modelo;
 import java.time.LocalDate;
 
-public class Compra {
-
-    private String usuarioId;
-    private Producto producto;
-    private LocalDate fecha;
 /**
  *
  * @author Josea
  */
-    public Compra(String usuarioId, Producto producto, LocalDate fecha) {
-        this.usuarioId = usuarioId;
+public class Compra {
+
+    private Usuario comprador;
+    private Producto producto;
+    private LocalDate fecha;
+
+    public Compra(Usuario comprador, Producto producto, LocalDate fecha) {
+        this.comprador = comprador;
         this.producto = producto;
         this.fecha = fecha;
     }
 
-    public String getUsuarioId() { return usuarioId; }
+    public Usuario getComprador() { return comprador; }
     public Producto getProducto() { return producto; }
     public LocalDate getFecha() { return fecha; }
-
-    @Override
-    public String toString() {
-        return usuarioId + ";" + producto.getId() + ";" + fecha.toString();
-    }
 }
