@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Producto.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Usuario.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Carrito.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Favoritos.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Compra.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Sesion.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/ArchivoTexto.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/CatalogoPrincipal.fxml</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/CatalogoPrincipalController.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/LoginController.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/Login.fxml</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/RetroStore.java</file>
+        </group>
+    </open-files>
 </project-private>
