@@ -10,13 +10,16 @@
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Producto.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Sesion.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Usuario.java</file>
-            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/RetroStore.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/Login.fxml</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/LoginController.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Repositorio.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Historial.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/JSONManager.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/app/MainApp.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/AdminController.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/admin.fxml</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/añadir.fxml</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/AñadirController.java</file>
         </group>
     </open-files>
 </project-private>
