@@ -29,13 +29,13 @@
       </Text>
       <ImageView fx:id="imgInter" fitHeight="150.0" fitWidth="200.0" layoutX="15.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Resources/imagenes/inter.png" />
+            <Image url="@../imagenes/inter.png" />
          </image>
       </ImageView>
       <Text layoutX="57.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inter 1997-1998" />
       <Text layoutX="31.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar como:" />
-      <Button fx:id="btnSeleccion" layoutX="25.0" layoutY="427.0" mnemonicParsing="false" onAction="#onSeleccion" style="-fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 5 20 5 20;" text="Selección" textFill="WHITE" />
-      <Button fx:id="btnClubes" layoutX="138.0" layoutY="427.0" mnemonicParsing="false" onAction="#onClubes" style="-fx-padding: 5 20 5 20; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: black;" text="Clubes" textFill="WHITE" />
+      <Button fx:id="btnSeleccion" layoutX="25.0" layoutY="427.0" mnemonicParsing="false" onAction="#agregarSeleccion" style="-fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 5 20 5 20;" text="Selección" textFill="WHITE" />
+      <Button fx:id="btnClubes" layoutX="138.0" layoutY="427.0" mnemonicParsing="false" onAction="#agregarClubes" style="-fx-padding: 5 20 5 20; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: black;" text="Clubes" textFill="WHITE" />
       <Pane layoutX="122.0" layoutY="51.0" prefHeight="19.0" prefWidth="22.0" style="-fx-background-color: #F2F2F2; -fx-background-radius: 20; -fx-border-radius: 20;">
          <children>
             <Text layoutX="6.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
@@ -48,7 +48,7 @@
       <Line endX="21.5999755859375" endY="-50.20001220703125" layoutX="154.0" layoutY="419.0" startX="21.5999755859375" startY="-250.20001220703125" stroke="#b1a5a5" />
       <ImageView fx:id="imgAjax" fitHeight="172.0" fitWidth="150.0" layoutX="172.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Resources/imagenes/ajaxxxxx.png" />
+            <Image url="@../imagenes/ajaxxxxx.png" />
          </image>
       </ImageView>
       <Text layoutX="206.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajax 1997-1998" />

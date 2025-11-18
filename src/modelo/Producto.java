@@ -1,3 +1,5 @@
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -14,7 +16,6 @@ public class Producto {
     private String nombre;
     private String descripcion;
     private String categoria;
-    private String pais;
     private int anio;
     private double precio;
     private String imagen;
@@ -27,7 +28,6 @@ public class Producto {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.categoria = categoria;
-        this.pais = pais;
         this.anio = anio;
         this.precio = precio;
         this.imagen = imagen;
@@ -37,7 +37,6 @@ public class Producto {
     public String getNombre() { return nombre; }
     public String getDescripcion() { return descripcion; }
     public String getCategoria() { return categoria; }
-    public String getPais() { return pais; }
     public int getAnio() { return anio; }
     public double getPrecio() { return precio; }
     public String getImagen() { return imagen; }
@@ -46,7 +45,6 @@ public class Producto {
     public void setNombre(String nombre) { this.nombre = nombre; }
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
     public void setCategoria(String categoria) { this.categoria = categoria; }
-    public void setPais(String pais) { this.pais = pais; }
     public void setAnio(int anio) { this.anio = anio; }
     public void setPrecio(double precio) { this.precio = precio; }
     public void setImagen(String imagen) { this.imagen = imagen; }

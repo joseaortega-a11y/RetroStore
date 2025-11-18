@@ -18,7 +18,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/vista/login.fxml")));
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/vista/Historial.fxml")));
         stage.setScene(scene);
         stage.setTitle("Retro Store");
         stage.show();
