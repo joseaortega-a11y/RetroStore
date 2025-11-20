@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="343.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.HistorialController">
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="343.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CarritoController">
    <children>
       <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="38.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -55,7 +55,7 @@
             <Image url="@../resources/imagenes/fav.png" />
          </image>
       </ImageView>
-      <Text layoutX="43.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mis compras:">
+      <Text layoutX="51.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu carrito:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -64,5 +64,6 @@
       <Button layoutX="102.0" layoutY="510.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
       <Button layoutX="223.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
       <Button layoutX="164.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
+      <Button layoutX="42.0" layoutY="414.0" mnemonicParsing="false" style="-fx-padding: 5 20 5 20; -fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="Continuar compra" textAlignment="CENTER" textFill="WHITE" />
    </children>
 </AnchorPane>

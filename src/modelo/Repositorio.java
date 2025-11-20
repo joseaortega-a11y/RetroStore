@@ -19,7 +19,9 @@ public class Repositorio {
     // --- Listas principales ---
     public static List<Usuario> usuarios = new ArrayList<>();
     public static List<Producto> productos = new ArrayList<>();
-    public static List<Compra> compras = new ArrayList<>();
+    public static List<Producto> compras = new ArrayList<>();
+    public static List<Producto> favoritos = new ArrayList<>();
+
 
 
     // --- Cargar datos desde JSON ---

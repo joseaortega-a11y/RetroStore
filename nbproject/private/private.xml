@@ -9,6 +9,8 @@
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Favoritos.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Producto.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Sesion.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/HistorialController.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/Historial.fxml</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/modelo/Usuario.java</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/Login.fxml</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/LoginController.java</file>
@@ -20,6 +22,14 @@
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/admin.fxml</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/añadir.fxml</file>
             <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/AñadirController.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/Clubes.fxml</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/ClubesController.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/carrito.fxml</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/CarritoController.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/seleccion.fxml</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/SeleccionController.java</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/vista/Favoritos.fxml</file>
+            <file>file:/C:/Users/Josea/OneDrive/Documents/NetBeansProjects/RetroStore/src/controlador/FavoritosController.java</file>
         </group>
     </open-files>
 </project-private>
