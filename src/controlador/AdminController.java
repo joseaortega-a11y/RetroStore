@@ -32,7 +32,7 @@ public class AdminController {
         System.out.println("AdminController cargado");
     }
 
-    // ✔ BOTÓN CONTINUAR
+    //  BOTÓN CONTINUAR
     @FXML
     private void onContinuar(ActionEvent event) {
         if (txtContra.getText().isEmpty()) {
@@ -49,15 +49,14 @@ public class AdminController {
         cambiarVentana("/vista/añadir.fxml", "Panel de Administración");
     }
 
-    // ✔ BOTÓN VOLVER
+    //  BOTÓN VOLVER
     @FXML
     private void onVolver(ActionEvent event) {
         cambiarVentana("/vista/Login.fxml", "Retro Store");
     }
 
-    // --------------------------
-    // CAMBIAR DE VENTANA
-    // --------------------------
+   // CAMBIAR DE VENTANA
+  
     private void cambiarVentana(String ruta, String titulo) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(ruta));
@@ -76,9 +75,8 @@ public class AdminController {
         }
     }
 
-    // --------------------------
     // ALERTAS
-    // --------------------------
+  
     private void mostrarError(String titulo, String msg) {
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setTitle(titulo);

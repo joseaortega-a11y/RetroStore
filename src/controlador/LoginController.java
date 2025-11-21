@@ -40,33 +40,29 @@ public class LoginController {
         System.out.println("LoginController inicializado.");
     }
 
-    // ------------------------
     // Evento botón "Usuario"
-    // ------------------------
+  
     @FXML
     private void onUsuario(ActionEvent event) {
         if (!validarCampos()) return;
 
-        // TODO: Aquí conectar con tu clase de datos
-        // ejemplo:
-        // boolean ok = BaseDatos.validarUsuario(txtIdentificacion.getText(), txtContrasena.getText());
-
+        
         mostrarInfo("Inicio de sesión", "Inicio de sesión como Usuario exitoso.");
 
         cambiarVentana("/vista/MenuUsuario.fxml", "Retro Store - Usuario");
     }
 
-    // ------------------------
+   
     // Evento botón "Admin"
-    // ------------------------
+   
     @FXML
     private void onAdmin(ActionEvent event) {
         cambiarVentana("/vista/Admin.fxml", "Retro Store - Admin");
     }
 
-    // ------------------------
+  
     // Validación de campos
-    // ------------------------
+  
     private boolean validarCampos() {
         if (txtId.getText().isEmpty() ||
             txtCorreo.getText().isEmpty() ||
@@ -79,9 +75,9 @@ public class LoginController {
         return true;
     }
 
-    // ------------------------
+ 
     // Cambiar pantalla
-    // ------------------------
+   
     private void cambiarVentana(String rutaFXML, String tituloVentana) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(rutaFXML));
@@ -100,9 +96,9 @@ public class LoginController {
         }
     }
 
-    // ------------------------
+
     // Alertas
-    // ------------------------
+    
     private void mostrarError(String titulo, String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setHeaderText(null);

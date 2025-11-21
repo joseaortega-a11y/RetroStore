@@ -19,7 +19,7 @@ public class Repositorio {
     // --- Listas principales ---
     public static List<Usuario> usuarios = new ArrayList<>();
     public static List<Producto> productos = new ArrayList<>();
-    public static List<Producto> compras = new ArrayList<>();
+    public static List<Producto> carrito = new ArrayList<>();
     public static List<Producto> favoritos = new ArrayList<>();
 
 
