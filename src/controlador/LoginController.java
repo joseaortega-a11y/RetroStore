@@ -48,8 +48,7 @@ public class LoginController {
 
         
         mostrarInfo("Inicio de sesión", "Inicio de sesión como Usuario exitoso.");
-
-        cambiarVentana("/vista/MenuUsuario.fxml", "Retro Store - Usuario");
+              cambiarVentana("/vista/seleccion.fxml", "Retro Store - Catálogo");
     }
 
    

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="360.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controlador.TiendaController">
+
+
+    <!-- BARRA SUPERIOR DE BÚSQUEDA -->
+    <HBox layoutX="16.0" layoutY="16.0" prefHeight="56.0" prefWidth="328.0" spacing="10"
+          style="-fx-background-color: #f2f2f2; -fx-background-radius: 28; -fx-padding: 10;">
+        <padding>
+            <Insets top="6" bottom="6" left="12" right="12" />
+        </padding>
+
+
+        <ImageView fx:id="ivLupa" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <!-- si quieres usar las imágenes subidas en el contenedor: -->
+                <Image url="/mnt/data/77fb931a-03b6-4d0a-bcf0-0be2e30fb716.png" />
+            </image>
+        </ImageView>
+
+
+        <ImageView fx:id="ivClip" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="/mnt/data/b4c460ca-9661-4d3f-8167-fab1528b08b8.png" />
+            </image>
+        </ImageView>
+
+
+    </HBox>
+
+
+    <!-- FILTRO / CLASIFICAR -->
+    <HBox layoutX="16.0" layoutY="88.0" spacing="10.0">
+        <ComboBox fx:id="cbFiltro" prefWidth="140.0" promptText="Filtro" />
+        <ComboBox fx:id="cbClasificar" prefWidth="140.0" promptText="Clasificar" />
+    </HBox>
+
+
+    <!-- CATEGORIA -->
+    <Text layoutX="16.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+
+    <VBox layoutX="16.0" layoutY="170.0" spacing="8.0" prefWidth="328.0" prefHeight="300.0" fx:id="areaCentral">
+        <!-- Aquí puedes mostrar un StackPane con las diferentes vistas -->
+</AnchorPane>

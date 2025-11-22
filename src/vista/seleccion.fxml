@@ -1,150 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650" prefWidth="360"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controlador.SeleccionesController">
+<AnchorPane prefHeight="650" prefWidth="360" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SeleccionController">
 
-    <children>
+    <!-- Buscador -->
+    <HBox layoutX="4.0" layoutY="19.0" prefHeight="0.0" prefWidth="0.0" spacing="10" style="-fx-background-color: #f4f4f4; -fx-background-radius: 20; -fx-padding: 10;">
+        <ImageView fitHeight="20" fitWidth="20">
+            <image><Image url="@../imagenes/Busqueda.png" /></image>
+        </ImageView>
+    </HBox>
 
-        <!-- Título -->
-        <Text layoutX="20" layoutY="50" text="Categoria">
-            <font><Font name="System Bold" size="18"/></font>
-        </Text>
+    <Text layoutX="20.0" layoutY="132.0" text="Categoría: Selecciones">
+        <font><Font name="System Bold" size="14" /></font>
+    </Text>
 
-        <Text layoutX="140" layoutY="50" text="Selecciones.">
-            <font><Font size="14"/></font>
-        </Text>
+    <!-- CONTENEDOR GENERAL -->
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="20.0" layoutY="154.0" prefHeight="406.0" prefWidth="320">
+        <content>
+            <VBox fx:id="contenedorSeleccion" spacing="20">
 
-        <!-- Scroll principal -->
-        <ScrollPane fitToWidth="true" layoutX="10" layoutY="70"
-                    prefHeight="474" prefWidth="340">
+                <!-- FILA 1 -->
+                <HBox spacing="20">
 
-            <content>
-                <VBox spacing="25" style="-fx-padding: 10;">
+                    <!-- Portugal -->
+                    <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
+                        <ImageView fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image><Image url="@../imagenes/portugal.png" /></image>
+                        </ImageView>
+                        <Text>Portugal 2002</Text>
+                        <Button onAction="#carritoPortugal" prefHeight="26.0" prefWidth="62.0" text="Carrito" />
+                        <Button onAction="#favoritoPortugal" text="Favoritos" />
+                    </VBox>
 
-                    <!-- ========== FILA 1 ========== -->
-                    <HBox alignment="CENTER" spacing="15">
+                    <!-- Brasil -->
+                    <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
+                        <ImageView fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image><Image url="@../imagenes/brazil.png" /></image>
+                        </ImageView>
+                        <Text>Brasil 2002</Text>
+                        <Button onAction="#carritoBrasil" prefHeight="26.0" prefWidth="66.0" text="Carrito" />
+                        <Button onAction="#favoritoBrasil" text="Favoritos" />
+                    </VBox>
 
-                        <!-- Alemanha -->
-                        <VBox prefWidth="140" spacing="5"
-                              style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
-                            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
-                                <image><Image url="@../imagenes/alemania2006.png"/></image>
-                            </ImageView>
-                            <Text text="Alemania 2006"/>
-                            <Button fx:id="btnCarritoAlemania" onAction="#carritoAlemania" prefWidth="120" text="Carrito"/>
-                            <Button fx:id="btnFavAlemania" onAction="#favoritoAlemania" prefWidth="120" text="Favoritos"/>
-                        </VBox>
+                </HBox>
 
-                        <Separator orientation="VERTICAL" prefHeight="150"/>
+                <!-- FILA 2 -->
+                <HBox prefHeight="182.0" prefWidth="305.0" spacing="20">
 
-                        <!-- Italia -->
-                        <VBox prefWidth="140" spacing="5"
-                              style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
-                            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
-                                <image><Image url="@../imagenes/italia1996.png"/></image>
-                            </ImageView>
-                            <Text text="Italia 1996"/>
-                            <Button onAction="#carritoItalia" prefWidth="120" text="Carrito"/>
-                            <Button onAction="#favoritoItalia" prefWidth="120" text="Favoritos"/>
-                        </VBox>
-                    </HBox>
+                    <!-- Francia -->
+                    <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
+                        <ImageView fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image><Image url="@../imagenes/francia.png" /></image>
+                        </ImageView>
+                        <Text>Francia 2006</Text>
+                        <Button onAction="#carritoFrancia" text="Carrito" />
+                        <Button onAction="#favoritoFrancia" text="Favoritos" />
+                    </VBox>
 
-                    <!-- ========== FILA 2 ========== -->
-                    <HBox alignment="CENTER" spacing="15">
+                    <!-- Argentina -->
+                    <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
+                        <ImageView fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image><Image url="@../imagenes/argentina.png" /></image>
+                        </ImageView>
+                        <Text>Argentina 2006</Text>
+                        <Button onAction="#carritoArgentina" text="Carrito" />
+                        <Button onAction="#favoritoArgentina" text="Favoritos" />
+                    </VBox>
 
-                        <!-- España -->
-                        <VBox prefWidth="140" spacing="5"
-                              style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
-                            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
-                                <image><Image url="@../imagenes/espana2006.png"/></image>
-                            </ImageView>
-                            <Text text="España 2006"/>
-                            <Button onAction="#carritoEspaña" prefWidth="120" text="Carrito"/>
-                            <Button onAction="#favoritoEspaña" prefWidth="120" text="Favoritos"/>
-                        </VBox>
+                </HBox>
 
-                        <Separator orientation="VERTICAL" prefHeight="150"/>
+                <!-- FILA 3 -->
+                <HBox spacing="20">
 
-                        <!-- Croacia -->
-                        <VBox prefWidth="140" spacing="5"
-                              style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
-                            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
-                                <image><Image url="@../imagenes/croacia1996.png"/></image>
-                            </ImageView>
-                            <Text text="Croacia 1996"/>
-                            <Button onAction="#carritoCroacia" prefWidth="120" text="Carrito"/>
-                            <Button onAction="#favoritoCroacia" prefWidth="120" text="Favoritos"/>
-                        </VBox>
-                    </HBox>
+                    <!-- Alemania -->
+                    <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
+                        <ImageView fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image><Image url="@../imagenes/alemania.png" /></image>
+                        </ImageView>
+                        <Text>Alemania 2006</Text>
+                        <Button onAction="#carritoAlemania" text="Carrito" />
+                        <Button onAction="#favoritoAlemania" text="Favoritos" />
+                    </VBox>
 
-                    <!-- ========== FILA 3 ========== -->
-                    <HBox alignment="CENTER" spacing="15">
+                    <!-- Italia -->
+                    <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
+                        <ImageView fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image><Image url="@../imagenes/italia.png" /></image>
+                        </ImageView>
+                        <Text>Italia 1996</Text>
+                        <Button onAction="#carritoItalia" text="Carrito" />
+                        <Button onAction="#favoritoItalia" text="Favoritos" />
+                    </VBox>
 
-                        <!-- Portugal -->
-                        <VBox prefWidth="140" spacing="5"
-                              style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
-                            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
-                                <image><Image url="@../imagenes/portugal2002.png"/></image>
-                            </ImageView>
-                            <Text text="Portugal 2002"/>
-                            <Button onAction="#carritoPortugal" prefWidth="120" text="Carrito"/>
-                            <Button onAction="#favoritoPortugal" prefWidth="120" text="Favoritos"/>
-                        </VBox>
+                </HBox>
 
-                        <Separator orientation="VERTICAL" prefHeight="150"/>
+                <!-- FILA 4 -->
+                <HBox spacing="20">
 
-                        <!-- Brasil -->
-                        <VBox prefWidth="140" spacing="5"
-                              style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
-                            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
-                                <image><Image url="@../imagenes/brasil2002.png"/></image>
-                            </ImageView>
-                            <Text text="Brasil 2002"/>
-                            <Button onAction="#carritoBrasil" prefWidth="120" text="Carrito"/>
-                            <Button onAction="#favoritoBrasil" prefWidth="120" text="Favoritos"/>
-                        </VBox>
-                    </HBox>
+                    <!-- España -->
+                    <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
+                        <ImageView fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image><Image url="@../imagenes/spain.png" /></image>
+                        </ImageView>
+                        <Text>España 2006</Text>
+                        <Button onAction="#carritoEspana" text="Carrito" />
+                        <Button onAction="#favoritoEspana" text="Favoritos" />
+                    </VBox>
 
-                    <!-- ========== FILA 4 ========== -->
-                    <HBox alignment="CENTER" spacing="15">
+                    <!-- Croacia -->
+                    <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
+                        <ImageView fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image><Image url="@../imagenes/croacia.png" /></image>
+                        </ImageView>
+                        <Text>Croacia 1996</Text>
+                        <Button onAction="#carritoCroacia" text="Carrito" />
+                        <Button onAction="#favoritoCroacia" text="Favoritos" />
+                    </VBox>
 
-                        <!-- Francia -->
-                        <VBox prefWidth="140" spacing="5"
-                              style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
-                            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
-                                <image><Image url="@../imagenes/francia2006.png"/></image>
-                            </ImageView>
-                            <Text text="Francia 2006"/>
-                            <Button onAction="#carritoFrancia" prefWidth="120" text="Carrito"/>
-                            <Button onAction="#favoritoFrancia" prefWidth="120" text="Favoritos"/>
-                        </VBox>
+                </HBox>
 
-                        <Separator orientation="VERTICAL" prefHeight="150"/>
+            </VBox>
+        </content>
+    </ScrollPane>
 
-                        <!-- Argentina -->
-                        <VBox prefWidth="140" spacing="5"
-                              style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
-                            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
-                                <image><Image url="@../imagenes/argentina2006.png"/></image>
-                            </ImageView>
-                            <Text text="Argentina 2006"/>
-                            <Button onAction="#carritoArgentina" prefWidth="120" text="Carrito"/>
-                            <Button onAction="#favoritoArgentina" prefWidth="120" text="Favoritos"/>
-                        </VBox>
-                    </HBox>
-
-                </VBox>
-            </content>
-
-        </ScrollPane>
-
-    </children>
+     <TextField fx:id="txtBuscar" layoutX="77.0" layoutY="26.0" prefHeight="27.0" prefWidth="257.0" promptText="Buscar selecciones..." style="-fx-background-color: #D3D3D3; -fx-border-color: transparent;">
+         <font>
+         <Font name="System Bold" size="12" />
+      </font>
+     </TextField>
+   <Button fx:id="btnVerclubes" layoutX="206.0" layoutY="114.0" mnemonicParsing="false" onAction="#VerClubes" style="-fx-background-color: #D3D3D3;" text="Ver Clubes">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="25.0" layoutY="68.0" mnemonicParsing="false" text="Button" />
+   <Button layoutX="93.0" layoutY="68.0" mnemonicParsing="false" text="Button" />
 
 </AnchorPane>

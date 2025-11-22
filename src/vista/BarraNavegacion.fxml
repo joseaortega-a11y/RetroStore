@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="70" prefWidth="360"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controlador.BarraNavegacionController">
+
+    <children>
+
+        <!-- Iconos -->
+        <ImageView fx:id="btnHome" layoutX="35" layoutY="20" fitHeight="28" fitWidth="28"
+                   onMouseClicked="#irHome">
+            <image><Image url="@../imagenes/Home.png"/></image>
+        </ImageView>
+
+        <ImageView fx:id="btnFavoritos" layoutX="100" layoutY="20" fitHeight="28" fitWidth="28"
+                   onMouseClicked="#irFavoritos">
+            <image><Image url="@../imagenes/fav.png"/></image>
+        </ImageView>
+
+        <ImageView fx:id="btnCarrito" layoutX="165" layoutY="20" fitHeight="28" fitWidth="28"
+                   onMouseClicked="#irCarrito">
+            <image><Image url="@../imagenes/carrito.png"/></image>
+        </ImageView>
+
+        <ImageView fx:id="btnHistorial" layoutX="230" layoutY="20" fitHeight="28" fitWidth="28"
+                   onMouseClicked="#irHistorial">
+            <image><Image url="@../imagenes/historial.png"/></image>
+        </ImageView>
+
+        <ImageView fx:id="btnUsuario" layoutX="295" layoutY="20" fitHeight="28" fitWidth="28"
+                   onMouseClicked="#irUsuario">
+            <image><Image url="@../imagenes/usuario.png"/></image>
+        </ImageView>
+
+        <!-- Línea debajo -->
+        <Line startX="40" startY="65" endX="320" endY="65" strokeWidth="3"/>
+
+    </children>
+
+</AnchorPane>

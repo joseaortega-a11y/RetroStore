@@ -1,146 +1,88 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package controlador;
 
-
-/**
- * FXML Controller class
- *
- * @author Josea
- */
-
-
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import modelo.Producto;
-import modelo.Repositorio;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class SeleccionController {
 
-    // ============================
-    //  ALERTA
-    // ============================
-    private void show(String t, String m) {
-        Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setHeaderText(null);
-        a.setTitle(t);
-        a.setContentText(m);
-        a.show();
+    @FXML
+    private TextField txtBuscar;
+
+    @FXML
+    private VBox contenedorSeleccion;
+
+
+    /* ╔═══════════════════════════════════╗
+       ║        BUSCADOR                   ║
+       ╚═══════════════════════════════════╝ */
+    @FXML
+    private void buscarProducto() {
+        String filtro = txtBuscar.getText().toLowerCase();
+
+        contenedorSeleccion.getChildren().forEach(nodo -> nodo.setVisible(true));
+
+        contenedorSeleccion.getChildren().forEach(fila -> {
+            if (fila instanceof VBox || fila instanceof javafx.scene.layout.HBox) {
+                javafx.scene.layout.HBox filaCamisetas = (javafx.scene.layout.HBox) fila;
+
+                filaCamisetas.getChildren().forEach(c -> {
+                    VBox camiseta = (VBox) c;
+
+                    String nombre = ((javafx.scene.text.Text) camiseta.getChildren().get(1)).getText();
+
+                    camiseta.setVisible(nombre.toLowerCase().contains(filtro));
+                });
+            }
+        });
     }
 
-    // ============================
-    //  CREAR PRODUCTO
-    // ============================
-    private Producto crearProducto(String id, String nombre, int anio, String imagen) {
-        return new Producto(
-                id,
-                nombre,
-                "Camiseta retro " + nombre,
-                "Selecciones",
-                "Desconocido",
-                anio,
-                49.99,
-                imagen
-        );
+
+    /* ╔═══════════════════════════════════╗
+       ║  CAMISETAS → AÑADIR AL CARRITO    ║
+       ╚═══════════════════════════════════╝ */
+    @FXML private void carritoPortugal()  { System.out.println("Portugal añadida al carrito"); }
+    @FXML private void carritoBrasil()    { System.out.println("Brasil añadida al carrito"); }
+    @FXML private void carritoFrancia()   { System.out.println("Francia añadida al carrito"); }
+    @FXML private void carritoArgentina() { System.out.println("Argentina añadida al carrito"); }
+    @FXML private void carritoAlemania()  { System.out.println("Alemania añadida al carrito"); }
+    @FXML private void carritoItalia()    { System.out.println("Italia añadida al carrito"); }
+    @FXML private void carritoEspana()    { System.out.println("España añadida al carrito"); }
+    @FXML private void carritoCroacia()   { System.out.println("Croacia añadida al carrito"); }
+
+
+    /* ╔═══════════════════════════════════╗
+       ║   CAMISETAS → FAVORITOS           ║
+       ╚═══════════════════════════════════╝ */
+    @FXML private void favoritoPortugal()  { System.out.println("Portugal a favoritos"); }
+    @FXML private void favoritoBrasil()    { System.out.println("Brasil a favoritos"); }
+    @FXML private void favoritoFrancia()   { System.out.println("Francia a favoritos"); }
+    @FXML private void favoritoArgentina() { System.out.println("Argentina a favoritos"); }
+    @FXML private void favoritoAlemania()  { System.out.println("Alemania a favoritos"); }
+    @FXML private void favoritoItalia()    { System.out.println("Italia a favoritos"); }
+    @FXML private void favoritoEspana()    { System.out.println("España a favoritos"); }
+    @FXML private void favoritoCroacia()   { System.out.println("Croacia a favoritos"); }
+
+
+    /* ╔═══════════════════════════════════╗
+       ║       CAMBIAR A CLUBES            ║
+       ╚═══════════════════════════════════╝ */
+    @FXML
+    private void VerClubes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Clubes.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) txtBuscar.getScene().getWindow();
+            stage.setScene(new Scene(root));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    private void addCarrito(Producto p) {
-        Repositorio.carrito.add(p);
-        show("Carrito", p.getNombre() + " agregado al carrito.");
-    }
-
-    private void addFav(Producto p) {
-        Repositorio.favoritos.add(p);
-        show("Favoritos", p.getNombre() + " agregado a favoritos.");
-    }
-
-    // ============================
-    //  ALEMANIA
-    // ============================
-    @FXML private void carritoAlemania() {
-        addCarrito(crearProducto("ALE2006", "Alemania 2006", 2006, "../imagenes/alemania2006.png"));
-    }
-
-    @FXML private void favoritoAlemania() {
-        addFav(crearProducto("ALE2006", "Alemania 2006", 2006, "../imagenes/alemania2006.png"));
-    }
-
-    // ============================
-    //  ITALIA
-    // ============================
-    @FXML private void carritoItalia() {
-        addCarrito(crearProducto("ITA1996", "Italia 1996", 1996, "../imagenes/italia1996.png"));
-    }
-
-    @FXML private void favoritoItalia() {
-        addFav(crearProducto("ITA1996", "Italia 1996", 1996, "../imagenes/italia1996.png"));
-    }
-
-    // ============================
-    //  ESPAÑA
-    // ============================
-    @FXML private void carritoEspaña() {
-        addCarrito(crearProducto("ESP2006", "España 2006", 2006, "../imagenes/espana2006.png"));
-    }
-
-    @FXML private void favoritoEspaña() {
-        addFav(crearProducto("ESP2006", "España 2006", 2006, "../imagenes/espana2006.png"));
-    }
-
-    // ============================
-    //  CROACIA
-    // ============================
-    @FXML private void carritoCroacia() {
-        addCarrito(crearProducto("CRO1996", "Croacia 1996", 1996, "../imagenes/croacia1996.png"));
-    }
-
-    @FXML private void favoritoCroacia() {
-        addFav(crearProducto("CRO1996", "Croacia 1996", 1996, "../imagenes/croacia1996.png"));
-    }
-
-    // ============================
-    //  PORTUGAL
-    // ============================
-    @FXML private void carritoPortugal() {
-        addCarrito(crearProducto("POR2002", "Portugal 2002", 2002, "../imagenes/portugal2002.png"));
-    }
-
-    @FXML private void favoritoPortugal() {
-        addFav(crearProducto("POR2002", "Portugal 2002", 2002, "../imagenes/portugal2002.png"));
-    }
-
-    // ============================
-    //  BRASIL
-    // ============================
-    @FXML private void carritoBrasil() {
-        addCarrito(crearProducto("BRA2002", "Brasil 2002", 2002, "../imagenes/brasil2002.png"));
-    }
-
-    @FXML private void favoritoBrasil() {
-        addFav(crearProducto("BRA2002", "Brasil 2002", 2002, "../imagenes/brasil2002.png"));
-    }
-
-    // ============================
-    //  FRANCIA
-    // ============================
-    @FXML private void carritoFrancia() {
-        addCarrito(crearProducto("FRA2006", "Francia 2006", 2006, "../imagenes/francia2006.png"));
-    }
-
-    @FXML private void favoritoFrancia() {
-        addFav(crearProducto("FRA2006", "Francia 2006", 2006, "../imagenes/francia2006.png"));
-    }
-
-    // ============================
-    //  ARGENTINA
-    // ============================
-    @FXML private void carritoArgentina() {
-        addCarrito(crearProducto("ARG2006", "Argentina 2006", 2006, "../imagenes/argentina2006.png"));
-    }
-
-    @FXML private void favoritoArgentina() {
-        addFav(crearProducto("ARG2006", "Argentina 2006", 2006, "../imagenes/argentina2006.png"));
-    }
 }

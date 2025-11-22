@@ -1,104 +1,107 @@
 package controlador;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import modelo.Producto;
-import modelo.Repositorio;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
-/**
- * ClubesController: añade productos a Repositorio.carrito y Repositorio.favoritos.
- * Usa los métodos ya presentes en tus FXML (onAction="#carritoArsenal", etc.)
- */
+import java.io.IOException;
+import java.util.Locale;
+
 public class ClubesController {
 
-    // Mensaje simple
-    private void mensaje(String titulo, String texto){
-        Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setHeaderText(null);
-        a.setTitle(titulo);
-        a.setContentText(texto);
-        a.show();
-    }
+    @FXML
+    private TextField txtBuscar;
 
-    // Crea un producto con los datos básicos (usa la ruta de imagen que uses en tu proyecto)
-    private Producto crearProducto(String id, String nombre, int anio, String imagen){
-        // Constructor Producto(id,nombre,descripcion,categoria,anio,precio,imagen)
-        return new Producto(id, nombre, "Camiseta retro " + nombre, "Clubes", anio, 49.99, imagen);
-    }
+    @FXML
+    private VBox contenedorPrincipal;
 
-    // Métodos de negocio: agregan a las listas públicas en Repositorio
-    private void agregarCarrito(Producto p){
-        Repositorio.carrito.add(p);
-        mensaje("Carrito", "Agregado al carrito: " + p.getNombre());
-    }
+    // ============================================================
+    //                          BÚSQUEDA
+    // ============================================================
+    @FXML
+    private void onBuscar() {
 
-    private void agregarFavoritos(Producto p){
-        // evita duplicados visualmente
-        if (!Repositorio.favoritos.contains(p)) {
-            Repositorio.favoritos.add(p);
-            mensaje("Favoritos", "Agregado a favoritos: " + p.getNombre());
-        } else {
-            mensaje("Favoritos", "El producto ya está en favoritos: " + p.getNombre());
+        String filtro = txtBuscar.getText().toLowerCase(Locale.ROOT);
+
+        for (var fila : contenedorPrincipal.getChildren()) {
+
+            if (fila instanceof javafx.scene.layout.HBox hbox) {
+
+                for (var nodo : hbox.getChildren()) {
+
+                    if (nodo instanceof VBox vbox) {
+
+                        String nombre = vbox.getChildren()
+                                .stream()
+                                .filter(c -> c instanceof Text)
+                                .map(c -> ((Text) c).getText())
+                                .findFirst()
+                                .orElse("")
+                                .toLowerCase(Locale.ROOT);
+
+                        boolean coincide = nombre.contains(filtro);
+
+                        vbox.setVisible(coincide);
+                        vbox.setManaged(coincide);
+                    }
+                }
+            }
         }
     }
 
-    // ==========================
-    // Métodos conectados a FXML
-    // Los nombres deben coincidir con onAction en tu FXML
-    // ==========================
-    @FXML private void carritoArsenal() {
-        agregarCarrito(crearProducto("ARS2004","Arsenal 2004-2005",2004,"/imagenes/arsenal.png"));
-    }
-    @FXML private void favoritoArsenal() {
-        agregarFavoritos(crearProducto("ARS2004","Arsenal 2004-2005",2004,"/imagenes/arsenal.png"));
+    // ============================================================
+    //                      CARRITO (según FXML)
+    // ============================================================
+    @FXML private void carritoChelsea()   { agregarCarrito("Chelsea 2007-2008"); }
+    @FXML private void carritoArsenal()   { agregarCarrito("Arsenal 2004-2005"); }
+    @FXML private void carritoLiverpool() { agregarCarrito("Liverpool 2006-2007"); }
+    @FXML private void carritoBarcelona() { agregarCarrito("Barcelona 2008-2009"); }
+    @FXML private void carritoUnited()    { agregarCarrito("United 2002-2004"); }
+    @FXML private void carritoMilan()     { agregarCarrito("Milan 2006-2007"); }
+    @FXML private void carritoCity()      { agregarCarrito("City 1997-1998"); }
+
+    private void agregarCarrito(String item) {
+        System.out.println("🛒 Añadido al carrito → " + item);
     }
 
-    @FXML private void carritoChelsea() {
-        agregarCarrito(crearProducto("CHE2007","Chelsea 2007-2008",2007,"/imagenes/chelsea.png"));
-    }
-    @FXML private void favoritoChelsea() {
-        agregarFavoritos(crearProducto("CHE2007","Chelsea 2007-2008",2007,"/imagenes/chelsea.png"));
+    // ============================================================
+    //                     FAVORITOS (según FXML)
+    // ============================================================
+    @FXML private void favoritoChelsea()   { agregarFavorito("Chelsea 2007-2008"); }
+    @FXML private void favoritoArsenal()   { agregarFavorito("Arsenal 2004-2005"); }
+    @FXML private void favoritoLiverpool() { agregarFavorito("Liverpool 2006-2007"); }
+    @FXML private void favoritoBarcelona() { agregarFavorito("Barcelona 2008-2009"); }
+    @FXML private void favoritoUnited()    { agregarFavorito("United 2002-2004"); }
+    @FXML private void favoritoMilan()     { agregarFavorito("Milan 2006-2007"); }
+    @FXML private void favoritoCity()      { agregarFavorito("City 1997-1998"); }
+
+    private void agregarFavorito(String item) {
+        System.out.println("⭐ Añadido a favoritos → " + item);
     }
 
-    @FXML private void carritoLiverpool() {
-        agregarCarrito(crearProducto("LIV2006","Liverpool 2006-2007",2006,"/imagenes/liverpool.png"));
-    }
-    @FXML private void favoritoLiverpool() {
-        agregarFavoritos(crearProducto("LIV2006","Liverpool 2006-2007",2006,"/imagenes/liverpool.png"));
-    }
-
-    @FXML private void carritoBarcelona() {
-        agregarCarrito(crearProducto("BAR2008","Barcelona 2008-2009",2008,"/imagenes/barsa.png"));
-    }
-    @FXML private void favoritoBarcelona() {
-        agregarFavoritos(crearProducto("BAR2008","Barcelona 2008-2009",2008,"/imagenes/barsa.png"));
+    // ============================================================
+    //                      NAVEGACIÓN
+    // ============================================================
+    @FXML
+    private void irASelecciones() {
+        cargarVentana("/vista/Seleccion.fxml");
     }
 
-    @FXML private void carritoUnited() {
-        agregarCarrito(crearProducto("UNI2002","United 2002-2004",2002,"/imagenes/united.png"));
-    }
-    @FXML private void favoritoUnited() {
-        agregarFavoritos(crearProducto("UNI2002","United 2002-2004",2002,"/imagenes/united.png"));
-    }
-
-    @FXML private void carritoMadrid() {
-        agregarCarrito(crearProducto("RMA2011","Real Madrid 2011-2012",2011,"/imagenes/madrid.png"));
-    }
-    @FXML private void favoritoMadrid() {
-        agregarFavoritos(crearProducto("RMA2011","Real Madrid 2011-2012",2011,"/imagenes/madrid.png"));
-    }
-
-    @FXML private void carritoMilan() {
-        agregarCarrito(crearProducto("MIL2006","Milan 2006-2007",2006,"/imagenes/milan.png"));
-    }
-    @FXML private void favoritoMilan() {
-        agregarFavoritos(crearProducto("MIL2006","Milan 2006-2007",2006,"/imagenes/milan.png"));
-    }
-
-    @FXML private void carritoCity() {
-        agregarCarrito(crearProducto("CIT1997","City 1997-1998",1997,"/imagenes/city.png"));
-    }
-    @FXML private void favoritoCity() {
-        agregarFavoritos(crearProducto("CIT1997","City 1997-1998",1997,"/imagenes/city.png"));
+    private void cargarVentana(String rutaFXML) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(rutaFXML));
+            Stage stage = (Stage) txtBuscar.getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            System.err.println("ERROR cargando ventana: " + rutaFXML);
+            ex.printStackTrace();
+        }
     }
 }
