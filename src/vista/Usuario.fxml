@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600" prefWidth="360" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.UsuarioController">
+
+    <VBox alignment="CENTER" layoutY="80" prefWidth="360" spacing="20">
+
+      
+        <Text text="¡Gracias por usar nuestros servicios!" textAlignment="CENTER" wrappingWidth="300">
+            <font>
+                <Font size="22" />
+            </font>
+        </Text>
+
+        <Label style="-fx-font-size: 14px; -fx-text-fill: #555;" text="Más funciones pronto…" />
+
+        <Button fx:id="btnCerrar" onAction="#cerrarSesion" prefWidth="180" style="-fx-background-color: #d9534f; -fx-text-fill: white;" text="Cerrar sesión" />
+      <Button fx:id="btnInicio" onAction="#Inicio" prefWidth="180" style="-fx-background-color: Black; -fx-text-fill: white;" text="Volver al Inicio" />
+    </VBox>
+
+</AnchorPane>

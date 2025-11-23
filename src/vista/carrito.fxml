@@ -6,7 +6,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -32,7 +31,6 @@
             <Image url="@../resources/imagenes/usuario.png" />
          </image>
       </ImageView>
-      <Line endX="100.0" layoutX="171.0" layoutY="559.0" startX="-100.0" strokeWidth="3.0" />
       <HBox layoutX="28.0" layoutY="35.0" prefHeight="40.0" prefWidth="286.0" spacing="10.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 25;">
          <padding>
             <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
@@ -65,5 +63,6 @@
       <Button layoutX="223.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
       <Button layoutX="164.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
       <Button layoutX="42.0" layoutY="414.0" mnemonicParsing="false" style="-fx-padding: 5 20 5 20; -fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="Continuar compra" textAlignment="CENTER" textFill="WHITE" />
+   <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

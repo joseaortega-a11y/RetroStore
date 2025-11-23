@@ -1,5 +1,6 @@
 package controlador;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -27,17 +28,28 @@ public class BarraNavegacionController {
     }
 
     @FXML
-    private void irHome(MouseEvent e) { cambiarVentana("/vista/seleccion.fxml"); }
+    private void irHome(ActionEvent e) {
+        cambiarVentana("/vista/seleccion.fxml");
+    }
 
     @FXML
-    private void irFavoritos(MouseEvent e) { cambiarVentana("/vista/Favoritos.fxml"); }
+    private void irFavoritos(ActionEvent e) {
+        cambiarVentana("/vista/Favoritos.fxml");
+    }
 
     @FXML
-    private void irCarrito(MouseEvent e) { cambiarVentana("/vista/carrito.fxml"); }
+    private void irCarrito(ActionEvent e) {
+        cambiarVentana("/vista/carrito.fxml");
+    }
 
     @FXML
-    private void irHistorial(MouseEvent e) { cambiarVentana("/vista/Historial.fxml"); }
+    private void irHistorial(ActionEvent e) {
+        cambiarVentana("/vista/Historial.fxml");
+    }
+
 
     @FXML
-    private void irUsuario(MouseEvent e) { cambiarVentana("/vista/usuario.fxml"); }
+  
+    private void irUsuario(ActionEvent e) { cambiarVentana("/vista/usuario.fxml"); }
+
 }

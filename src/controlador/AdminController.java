@@ -25,7 +25,7 @@ public class AdminController {
     @FXML
     private Button btnVolver;
 
-    private final String PASS_ADMIN = "admin123"; // puedes cambiarla
+    private final String PASS_ADMIN = "admin123"; 
 
     @FXML
     private void initialize() {
@@ -45,7 +45,6 @@ public class AdminController {
             return;
         }
 
-        // Si la contraseña es correcta → abrir panel admin
         cambiarVentana("/vista/añadir.fxml", "Panel de Administración");
     }
 

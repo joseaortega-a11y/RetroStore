@@ -40,6 +40,6 @@
     </ScrollPane>
 
     <!-- BARRA DE NAVEGACIÓN ABAJO -->
-    <fx:include source="BarraNavegacion.fxml"/>
 
+<fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
 </AnchorPane>

@@ -17,9 +17,8 @@ public class SeleccionController {
     private VBox contenedorSeleccion;
 
 
-    /* ╔═══════════════════════════════════╗
-       ║        BUSCADOR                   ║
-       ╚═══════════════════════════════════╝ */
+   //Buscador
+    
     @FXML
     private void buscarProducto() {
         String filtro = txtBuscar.getText().toLowerCase();
@@ -42,9 +41,8 @@ public class SeleccionController {
     }
 
 
-    /* ╔═══════════════════════════════════╗
-       ║  CAMISETAS → AÑADIR AL CARRITO    ║
-       ╚═══════════════════════════════════╝ */
+    //Carritos
+    
     @FXML private void carritoPortugal()  { System.out.println("Portugal añadida al carrito"); }
     @FXML private void carritoBrasil()    { System.out.println("Brasil añadida al carrito"); }
     @FXML private void carritoFrancia()   { System.out.println("Francia añadida al carrito"); }
@@ -55,9 +53,7 @@ public class SeleccionController {
     @FXML private void carritoCroacia()   { System.out.println("Croacia añadida al carrito"); }
 
 
-    /* ╔═══════════════════════════════════╗
-       ║   CAMISETAS → FAVORITOS           ║
-       ╚═══════════════════════════════════╝ */
+ //Favoritos
     @FXML private void favoritoPortugal()  { System.out.println("Portugal a favoritos"); }
     @FXML private void favoritoBrasil()    { System.out.println("Brasil a favoritos"); }
     @FXML private void favoritoFrancia()   { System.out.println("Francia a favoritos"); }
@@ -68,9 +64,7 @@ public class SeleccionController {
     @FXML private void favoritoCroacia()   { System.out.println("Croacia a favoritos"); }
 
 
-    /* ╔═══════════════════════════════════╗
-       ║       CAMBIAR A CLUBES            ║
-       ╚═══════════════════════════════════╝ */
+  
     @FXML
     private void VerClubes() {
         try {

@@ -49,7 +49,7 @@ public class CarritoController {
 
     @FXML
     private void initialize() {
-        // Render inicial
+   
         refrescarVista();
         if (btnComprar != null) {
             btnComprar.setOnAction(e -> finalizarCompra());
@@ -63,7 +63,7 @@ public class CarritoController {
         if (lblTotal != null) lblTotal.setText(String.format("Total: $%.2f", total));
     }
 
-    // refresca la lista visual
+    
     private void refrescarVista() {
         if (contenedorCarrito == null) return;
         contenedorCarrito.getChildren().clear();
@@ -82,7 +82,7 @@ public class CarritoController {
         try {
             iv.setImage(new Image(p.getImagen(), 80, 80, true, true));
         } catch (Exception ex) {
-            // intenta carga relativa por classpath
+            
             try { iv.setImage(new Image(getClass().getResourceAsStream(p.getImagen()))); } catch (Exception e){ }
         }
         Text t = new Text(p.getNombre() + " - $" + p.getPrecio());

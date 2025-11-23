@@ -37,13 +37,12 @@ public class AñadirController {
         imgAjax.setOnMouseClicked(e -> seleccionarProducto("Ajax 1997-1998"));
     }
 
-    // ---- SELECCIÓN DE PRODUCTO ----
+ 
     private void seleccionarProducto(String producto) {
         productoSeleccionado = producto;
         mostrarMensaje("Producto seleccionado", "Seleccionaste: " + producto);
     }
-
-    // ---- BOTÓN: AGREGAR COMO SELECCIÓN ----
+    
     @FXML
     private void agregarSeleccion() {
         if (productoSeleccionado == null) {
@@ -57,7 +56,7 @@ public class AñadirController {
         );
     }
 
-    // ---- BOTÓN: AGREGAR COMO CLUBES ----
+   
     @FXML
     private void agregarClubes() {
         if (productoSeleccionado == null) {
@@ -71,7 +70,7 @@ public class AñadirController {
         );
     }
 
-    // ---- ALERTA DE INFORMACIÓN ----
+    //ALERTA
     private void mostrarMensaje(String titulo, String contenido) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(null);
@@ -80,7 +79,7 @@ public class AñadirController {
         alert.showAndWait();
     }
 
-    // ---- ALERTA DE ERROR ----
+   
     private void mostrarError(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setHeaderText(null);
