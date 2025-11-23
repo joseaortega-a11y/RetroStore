@@ -1,15 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package controlador;
 
-
-/**
- * FXML Controller class
- *
- * @author Josea
- */
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -37,27 +27,17 @@ public class BarraNavegacionController {
     }
 
     @FXML
-    private void irHome(MouseEvent e) {
-        cambiarVentana("/vista/Home.fxml");
-    }
+    private void irHome(MouseEvent e) { cambiarVentana("/vista/seleccion.fxml"); }
 
     @FXML
-    private void irFavoritos(MouseEvent e) {
-        cambiarVentana("/vista/Favoritos.fxml");
-    }
+    private void irFavoritos(MouseEvent e) { cambiarVentana("/vista/Favoritos.fxml"); }
 
     @FXML
-    private void irCarrito(MouseEvent e) {
-        cambiarVentana("/vista/Carrito.fxml");
-    }
+    private void irCarrito(MouseEvent e) { cambiarVentana("/vista/carrito.fxml"); }
 
     @FXML
-    private void irHistorial(MouseEvent e) {
-        cambiarVentana("/vista/Historial.fxml");
-    }
+    private void irHistorial(MouseEvent e) { cambiarVentana("/vista/Historial.fxml"); }
 
     @FXML
-    private void irUsuario(MouseEvent e) {
-        cambiarVentana("/vista/Usuario.fxml");
-    }
+    private void irUsuario(MouseEvent e) { cambiarVentana("/vista/usuario.fxml"); }
 }

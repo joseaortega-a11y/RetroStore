@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650" prefWidth="360"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controlador.ClubesController">
+<AnchorPane prefHeight="650" prefWidth="360" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ClubesController">
 
     <!-- Buscador -->
-    <HBox layoutX="4" layoutY="19" spacing="10"
-          style="-fx-background-color:#f4f4f4; -fx-background-radius:20; -fx-padding:10;">
+    <HBox layoutX="36.0" layoutY="19.0" spacing="10" style="-fx-background-color:#f4f4f4; -fx-background-radius:20; -fx-padding:10;">
         <ImageView fitHeight="20" fitWidth="20">
             <image>
-                <Image url="@../imagenes/Busqueda.png"/>
+                <Image url="@../imagenes/Busqueda.png" />
             </image>
         </ImageView>
     </HBox>
 
     <Text layoutX="20" layoutY="132" text="Categoría: Clubes">
         <font>
-            <Font name="System Bold" size="14"/>
+            <Font name="System Bold" size="14" />
         </font>
     </Text>
 
     <!-- CONTENEDOR GENERAL -->
-    <ScrollPane fitToWidth="true" hbarPolicy="NEVER"
-                layoutX="20" layoutY="154" prefHeight="406" prefWidth="320">
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="20" layoutY="154" prefHeight="406" prefWidth="320">
         <content>
             <VBox fx:id="contenedorPrincipal" spacing="20">
 
@@ -38,24 +39,24 @@
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
                             <image>
-                                <Image url="@../imagenes/chelsea.png"/>
+                                <Image url="@../imagenes/chelsea.png" />
                             </image>
                         </ImageView>
                         <Text>Chelsea 2007-2008</Text>
-                        <Button onAction="#carritoChelsea" text="Carrito"/>
-                        <Button onAction="#favoritoChelsea" text="Favoritos"/>
+                        <Button onAction="#carritoChelsea" text="Carrito" />
+                        <Button onAction="#favoritoChelsea" text="Favoritos" />
                     </VBox>
 
                     <!-- Arsenal -->
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
                             <image>
-                                <Image url="@../imagenes/arsenal.png"/>
+                                <Image url="@../imagenes/arsenal.png" />
                             </image>
                         </ImageView>
                         <Text>Arsenal 2004-2005</Text>
-                        <Button onAction="#carritoArsenal" text="Carrito"/>
-                        <Button onAction="#favoritoArsenal" text="Favoritos"/>
+                        <Button onAction="#carritoArsenal" text="Carrito" />
+                        <Button onAction="#favoritoArsenal" text="Favoritos" />
                     </VBox>
                 </HBox>
 
@@ -65,24 +66,24 @@
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
                             <image>
-                                <Image url="@../imagenes/liverpool.png"/>
+                                <Image url="@../imagenes/liverpool.png" />
                             </image>
                         </ImageView>
                         <Text>Liverpool 2006-2007</Text>
-                        <Button onAction="#carritoLiverpool" text="Carrito"/>
-                        <Button onAction="#favoritoLiverpool" text="Favoritos"/>
+                        <Button onAction="#carritoLiverpool" text="Carrito" />
+                        <Button onAction="#favoritoLiverpool" text="Favoritos" />
                     </VBox>
 
                     <!-- Barcelona -->
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
                             <image>
-                                <Image url="@../imagenes/barsa.png"/>
+                                <Image url="@../imagenes/barsa.png" />
                             </image>
                         </ImageView>
                         <Text>Barcelona 2008-2009</Text>
-                        <Button onAction="#carritoBarcelona" text="Carrito"/>
-                        <Button onAction="#favoritoBarcelona" text="Favoritos"/>
+                        <Button onAction="#carritoBarcelona" text="Carrito" />
+                        <Button onAction="#favoritoBarcelona" text="Favoritos" />
                     </VBox>
                 </HBox>
 
@@ -92,24 +93,24 @@
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
                             <image>
-                                <Image url="@../imagenes/united.png"/>
+                                <Image url="@../imagenes/united.png" />
                             </image>
                         </ImageView>
                         <Text>United 2002-2004</Text>
-                        <Button onAction="#carritoUnited" text="Carrito"/>
-                        <Button onAction="#favoritoUnited" text="Favoritos"/>
+                        <Button onAction="#carritoUnited" text="Carrito" />
+                        <Button onAction="#favoritoUnited" text="Favoritos" />
                     </VBox>
 
                     <!-- Real Madrid -->
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
                             <image>
-                                <Image url="@../imagenes/madrid.png"/>
+                                <Image url="@../imagenes/madrid.png" />
                             </image>
                         </ImageView>
                         <Text>Real Madrid 2011-2012</Text>
-                        <Button onAction="#carritoMilan" text="Carrito"/>
-                        <Button onAction="#favoritoMilan" text="Favoritos"/>
+                        <Button onAction="#carritoMilan" text="Carrito" />
+                        <Button onAction="#favoritoMilan" text="Favoritos" />
                     </VBox>
                 </HBox>
 
@@ -119,24 +120,24 @@
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
                             <image>
-                                <Image url="@../imagenes/milan.png"/>
+                                <Image url="@../imagenes/milan.png" />
                             </image>
                         </ImageView>
                         <Text>Milan 2006-2007</Text>
-                        <Button onAction="#carritoMilan" text="Carrito"/>
-                        <Button onAction="#favoritoMilan" text="Favoritos"/>
+                        <Button onAction="#carritoMilan" text="Carrito" />
+                        <Button onAction="#favoritoMilan" text="Favoritos" />
                     </VBox>
 
                     <!-- City -->
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
                             <image>
-                                <Image url="@../imagenes/city.png"/>
+                                <Image url="@../imagenes/city.png" />
                             </image>
                         </ImageView>
                         <Text>City 1997-1998</Text>
-                        <Button onAction="#carritoCity" text="Carrito"/>
-                        <Button onAction="#favoritoCity" text="Favoritos"/>
+                        <Button onAction="#carritoCity" text="Carrito" />
+                        <Button onAction="#favoritoCity" text="Favoritos" />
                     </VBox>
                 </HBox>
 
@@ -144,14 +145,13 @@
         </content>
     </ScrollPane>
 
-    <TextField fx:id="txtBuscar" layoutX="77" layoutY="26"
-               prefHeight="27" prefWidth="257"
-               promptText="Buscar clubes..."
-               style="-fx-background-color:#D3D3D3; -fx-border-color:transparent;"/>
+    <TextField fx:id="txtBuscar" layoutX="77" layoutY="26" prefHeight="27" prefWidth="257" promptText="Buscar clubes..." style="-fx-background-color:#D3D3D3; -fx-border-color:transparent;" />
 
-    <Button layoutX="206" layoutY="114"
-            style="-fx-background-color:#D3D3D3;"
-            text="Ver Selecciones"
-            onAction="#irASelecciones"/>
+    <Button layoutX="206" layoutY="114" onAction="#irASelecciones" style="-fx-background-color:#D3D3D3;" text="Ver Selecciones" />
+    
+            <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   <Button layoutX="24.0" layoutY="70.0" mnemonicParsing="false" text="Filtro " />
+   <Button layoutX="92.0" layoutY="70.0" mnemonicParsing="false" text="Clasificar" />
+
 
 </AnchorPane>

@@ -2,7 +2,6 @@
 
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.shape.*?>
 
@@ -13,33 +12,47 @@
 
     <children>
 
-        <!-- Iconos -->
-        <ImageView fx:id="btnHome" layoutX="35" layoutY="20" fitHeight="28" fitWidth="28"
-                   onMouseClicked="#irHome">
-            <image><Image url="@../imagenes/Home.png"/></image>
+        <!-- ICONO HOME -->
+        <ImageView fx:id="imgHome" layoutX="35" layoutY="20" fitHeight="28" fitWidth="28">
+            <image><Image url="@/imagenes/Home.png"/></image>
         </ImageView>
+        <Button fx:id="btnHome" onAction="#irHome"
+                layoutX="35" layoutY="20" prefWidth="28" prefHeight="28"
+                style="-fx-background-color: transparent;"/>
 
-        <ImageView fx:id="btnFavoritos" layoutX="100" layoutY="20" fitHeight="28" fitWidth="28"
-                   onMouseClicked="#irFavoritos">
-            <image><Image url="@../imagenes/fav.png"/></image>
+        <!-- ICONO FAVORITOS -->
+        <ImageView fx:id="imgFavoritos" layoutX="100" layoutY="20" fitHeight="28" fitWidth="28">
+            <image><Image url="@/imagenes/fav.png"/></image>
         </ImageView>
+        <Button fx:id="btnFavoritos" onAction="#irFavoritos"
+                layoutX="100" layoutY="20" prefWidth="28" prefHeight="28"
+                style="-fx-background-color: transparent;"/>
 
-        <ImageView fx:id="btnCarrito" layoutX="165" layoutY="20" fitHeight="28" fitWidth="28"
-                   onMouseClicked="#irCarrito">
-            <image><Image url="@../imagenes/carrito.png"/></image>
+        <!-- ICONO CARRITO -->
+        <ImageView fx:id="imgCarrito" layoutX="165" layoutY="20" fitHeight="28" fitWidth="28">
+            <image><Image url="@/imagenes/carrito.png"/></image>
         </ImageView>
+        <Button fx:id="btnCarrito" onAction="#irCarrito"
+                layoutX="165" layoutY="20" prefWidth="28" prefHeight="28"
+                style="-fx-background-color: transparent;"/>
 
-        <ImageView fx:id="btnHistorial" layoutX="230" layoutY="20" fitHeight="28" fitWidth="28"
-                   onMouseClicked="#irHistorial">
-            <image><Image url="@../imagenes/historial.png"/></image>
+        <!-- ICONO HISTORIAL -->
+        <ImageView fx:id="imgHistorial" layoutX="230" layoutY="20" fitHeight="28" fitWidth="28">
+            <image><Image url="@/imagenes/historial.png"/></image>
         </ImageView>
+        <Button fx:id="btnHistorial" onAction="#irHistorial"
+                layoutX="230" layoutY="20" prefWidth="28" prefHeight="28"
+                style="-fx-background-color: transparent;"/>
 
-        <ImageView fx:id="btnUsuario" layoutX="295" layoutY="20" fitHeight="28" fitWidth="28"
-                   onMouseClicked="#irUsuario">
-            <image><Image url="@../imagenes/usuario.png"/></image>
+        <!-- ICONO USUARIO -->
+        <ImageView fx:id="imgUsuario" layoutX="295" layoutY="20" fitHeight="28" fitWidth="28">
+            <image><Image url="@/imagenes/usuario.png"/></image>
         </ImageView>
+        <Button fx:id="btnUsuario" onAction="#irUsuario"
+                layoutX="295" layoutY="20" prefWidth="28" prefHeight="28"
+                style="-fx-background-color: transparent;"/>
 
-        <!-- Línea debajo -->
+        <!-- LÍNEA INFERIOR -->
         <Line startX="40" startY="65" endX="320" endY="65" strokeWidth="3"/>
 
     </children>

@@ -14,7 +14,7 @@
 <AnchorPane prefHeight="650" prefWidth="360" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SeleccionController">
 
     <!-- Buscador -->
-    <HBox layoutX="4.0" layoutY="19.0" prefHeight="0.0" prefWidth="0.0" spacing="10" style="-fx-background-color: #f4f4f4; -fx-background-radius: 20; -fx-padding: 10;">
+    <HBox layoutX="36.0" layoutY="19.0" prefHeight="0.0" prefWidth="0.0" spacing="10" style="-fx-background-color: #f4f4f4; -fx-background-radius: 20; -fx-padding: 10;">
         <ImageView fitHeight="20" fitWidth="20">
             <image><Image url="@../imagenes/Busqueda.png" /></image>
         </ImageView>
@@ -133,17 +133,14 @@
         </content>
     </ScrollPane>
 
-     <TextField fx:id="txtBuscar" layoutX="77.0" layoutY="26.0" prefHeight="27.0" prefWidth="257.0" promptText="Buscar selecciones..." style="-fx-background-color: #D3D3D3; -fx-border-color: transparent;">
-         <font>
-         <Font name="System Bold" size="12" />
-      </font>
-     </TextField>
+     <TextField fx:id="txtBuscar" layoutX="77.0" layoutY="26.0" prefHeight="27.0" prefWidth="257.0" promptText="Buscar selecciones..." style="-fx-background-color: #D3D3D3; -fx-border-color: transparent;" />
    <Button fx:id="btnVerclubes" layoutX="206.0" layoutY="114.0" mnemonicParsing="false" onAction="#VerClubes" style="-fx-background-color: #D3D3D3;" text="Ver Clubes">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
    </Button>
-   <Button layoutX="25.0" layoutY="68.0" mnemonicParsing="false" text="Button" />
-   <Button layoutX="93.0" layoutY="68.0" mnemonicParsing="false" text="Button" />
+   <Button layoutX="25.0" layoutY="68.0" mnemonicParsing="false" text="Filtro " />
+   <Button layoutX="93.0" layoutY="68.0" mnemonicParsing="false" text="Clasificar" />
 
+   <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
 </AnchorPane>

@@ -1,68 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="343.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FavoritosController">
-   <children>
-      <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="38.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/casa.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="157.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/carrito.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="218.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/historial.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="282.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/usuario.png" />
-         </image>
-      </ImageView>
-      <Line endX="100.0" layoutX="171.0" layoutY="559.0" startX="-100.0" strokeWidth="3.0" />
-      <HBox layoutX="28.0" layoutY="35.0" prefHeight="40.0" prefWidth="286.0" spacing="10.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 25;">
-         <padding>
-            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-         </padding>
-         <children>
-            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../resources/imagenes/Captura%20de%20pantalla%202025-11-18%20144528.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../resources/imagenes/Captura%20de%20pantalla%202025-11-18%20144553.png" />
-               </image>
-            </ImageView>
-         </children>
-      </HBox>
-      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="99.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/fav.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="51.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mis Favoritos:">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Button layoutX="43.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
-      <Button layoutX="102.0" layoutY="510.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
-      <Button layoutX="223.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
-      <Button layoutX="164.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
-   </children>
+
+<AnchorPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controlador.FavoritosController"
+            prefWidth="360" prefHeight="640">
+
+    <!-- FONDO SUPERIOR -->
+    <Rectangle width="360" height="90" fill="#ffffff"/>
+
+    <!-- BUSCADOR -->
+    <HBox layoutX="55" layoutY="30" spacing="10">
+        <TextField fx:id="txtBuscar" promptText="Buscar favoritos..."
+                   prefWidth="250" />
+    </HBox>
+
+    <!-- Filtro + Clasificar -->
+    <HBox spacing="10" layoutX="40" layoutY="80">
+        <Button text="Filtro" style="-fx-background-color:#D3D3D3;"/>
+        <Button text="Clasificar" style="-fx-background-color:#D3D3D3;"/>
+    </HBox>
+
+    <!-- TÍTULO -->
+    <Label layoutX="20" layoutY="130" text="Favoritos"
+           style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+
+    <!-- SCROLL CON LOS PRODUCTOS FAVORITOS -->
+    <ScrollPane layoutY="160" prefHeight="400" prefWidth="360" hbarPolicy="NEVER">
+        <content>
+            <VBox fx:id="contenedorFavoritos" spacing="20"
+                  alignment="TOP_CENTER" prefWidth="360" />
+        </content>
+    </ScrollPane>
+
+    <!-- BARRA DE NAVEGACIÓN ABAJO -->
+    <fx:include source="BarraNavegacion.fxml"/>
+
 </AnchorPane>
