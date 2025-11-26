@@ -22,7 +22,7 @@ public class ClubesController {
     @FXML
     private VBox contenedorPrincipal;
 
-   //busqueda
+  
     @FXML
     private void onBuscar() {
 
@@ -55,7 +55,7 @@ public class ClubesController {
     }
 
 
-    //  carritos
+ 
 
     @FXML private void carritoChelsea()   { agregarCarrito("Chelsea 2007-2008"); }
     @FXML private void carritoArsenal()   { agregarCarrito("Arsenal 2004-2005"); }
@@ -70,7 +70,7 @@ public class ClubesController {
     }
 
     
-    // faoritos
+    
   
     @FXML private void favoritoChelsea()   { agregarFavorito("Chelsea 2007-2008"); }
     @FXML private void favoritoArsenal()   { agregarFavorito("Arsenal 2004-2005"); }
@@ -84,7 +84,7 @@ public class ClubesController {
         System.out.println("⭐ Añadido a favoritos → " + item);
     }
 
-    //                      NAVEGACIÓN
+ 
     
     @FXML
     private void irASelecciones() {
