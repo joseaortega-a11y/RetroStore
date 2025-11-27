@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
-/**
- *
- * @author Josea
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario {
 
     private String id;
@@ -15,6 +10,11 @@ public class Usuario {
     private String apodo;
     private String contrasena;
     private String rol;
+
+    // Listas del usuario
+    private List<Producto> favoritos = new ArrayList<>();
+    private List<Compra> historial = new ArrayList<>();
+    private List<Producto> carrito = new ArrayList<>();
 
     public Usuario() {}
 
@@ -37,4 +37,49 @@ public class Usuario {
     public void setApodo(String apodo) { this.apodo = apodo; }
     public void setContrasena(String contrasena) { this.contrasena = contrasena; }
     public void setRol(String rol) { this.rol = rol; }
+
+    // --------------------------
+    // FAVORITOS
+    // --------------------------
+    public List<Producto> getFavoritos() {
+        return favoritos;
+    }
+
+    public void agregarFavorito(Producto p) {
+        if (!favoritos.contains(p)) favoritos.add(p);
+    }
+
+    public void quitarFavorito(Producto p) {
+        favoritos.remove(p);
+    }
+
+    // --------------------------
+    // HISTORIAL
+    // --------------------------
+    public List<Compra> getHistorial() {
+        return historial;
+    }
+
+    public void agregarCompra(Compra compra) {
+        historial.add(compra);
+    }
+
+    // --------------------------
+    // CARRITO
+    // --------------------------
+    public List<Producto> getCarrito() {
+        return carrito;
+    }
+
+    public void agregarAlCarrito(Producto p) {
+        carrito.add(p);
+    }
+
+    public void quitarDelCarrito(Producto p) {
+        carrito.remove(p);
+    }
+
+    public void limpiarCarrito() {
+        carrito.clear();
+    }
 }
