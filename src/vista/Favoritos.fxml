@@ -1,45 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controlador.FavoritosController"
-            prefWidth="360" prefHeight="640">
-
-    <!-- FONDO SUPERIOR -->
-    <Rectangle width="360" height="90" fill="#ffffff"/>
+<AnchorPane prefHeight="645.0" prefWidth="360" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FavoritosController">
 
     <!-- BUSCADOR -->
     <HBox layoutX="55" layoutY="30" spacing="10">
-        <TextField fx:id="txtBuscar" promptText="Buscar favoritos..."
-                   prefWidth="250" />
+        <TextField fx:id="txtBuscar" prefWidth="250" promptText="Buscar favoritos..." style="-fx-background-color: white;" />
     </HBox>
 
     <!-- Filtro + Clasificar -->
-    <HBox spacing="10" layoutX="40" layoutY="80">
-        <Button text="Filtro" style="-fx-background-color:#D3D3D3;"/>
-        <Button text="Clasificar" style="-fx-background-color:#D3D3D3;"/>
+    <HBox layoutX="40" layoutY="80" spacing="10">
+        <Button style="-fx-background-color:#D3D3D3;" text="Filtro" />
+        <Button style="-fx-background-color:#D3D3D3;" text="Clasificar" />
     </HBox>
 
     <!-- TÍTULO -->
-    <Label layoutX="20" layoutY="130" text="Favoritos"
-           style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+    <Label layoutX="20" layoutY="130" style="-fx-font-size:18px; -fx-font-weight:bold;" text="Favoritos" />
 
     <!-- SCROLL CON LOS PRODUCTOS FAVORITOS -->
-    <ScrollPane layoutY="160" prefHeight="400" prefWidth="360" hbarPolicy="NEVER">
+    <ScrollPane hbarPolicy="NEVER" layoutX="9.0" layoutY="167.0" prefHeight="394.0" prefWidth="341.0">
         <content>
-            <VBox fx:id="contenedorFavoritos" spacing="20"
-                  alignment="TOP_CENTER" prefWidth="360" />
+            <VBox fx:id="contenedorFavoritos" alignment="TOP_CENTER" prefWidth="360" spacing="20" />
         </content>
     </ScrollPane>
 
     <!-- BARRA DE NAVEGACIÓN ABAJO -->
 
 <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   <HBox layoutX="24.0" layoutY="29.0" prefHeight="27.0" prefWidth="32.0">
+      <children>
+         <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../imagenes/Busqueda.png" />
+            </image>
+         </ImageView>
+      </children>
+   </HBox>
 </AnchorPane>

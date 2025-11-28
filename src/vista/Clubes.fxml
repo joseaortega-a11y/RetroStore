@@ -29,9 +29,9 @@
     </Text>
 
     <!-- CONTENEDOR GENERAL -->
-    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="20" layoutY="154" prefHeight="406" prefWidth="320">
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="20.0" layoutY="154.0" prefHeight="430.0" prefWidth="320">
         <content>
-            <VBox fx:id="contenedorPrincipal" spacing="20">
+            <VBox fx:id="contenedorPrincipal" prefHeight="582.0" prefWidth="318.0" spacing="20">
 
                 <!-- FILA 1 -->
                 <HBox spacing="20">
@@ -43,8 +43,8 @@
                             </image>
                         </ImageView>
                         <Text>Chelsea 2007-2008</Text>
-                        <Button onAction="#carritoChelsea" text="Carrito" />
-                        <Button onAction="#favoritoChelsea" text="Favoritos" />
+                        <Button onAction="#carritoChelsea" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoChelsea" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                     <!-- Arsenal -->
@@ -55,8 +55,8 @@
                             </image>
                         </ImageView>
                         <Text>Arsenal 2004-2005</Text>
-                        <Button onAction="#carritoArsenal" text="Carrito" />
-                        <Button onAction="#favoritoArsenal" text="Favoritos" />
+                        <Button onAction="#carritoArsenal" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoArsenal" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
                 </HBox>
 
@@ -70,8 +70,8 @@
                             </image>
                         </ImageView>
                         <Text>Liverpool 2006-2007</Text>
-                        <Button onAction="#carritoLiverpool" text="Carrito" />
-                        <Button onAction="#favoritoLiverpool" text="Favoritos" />
+                        <Button onAction="#carritoLiverpool" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoLiverpool" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                     <!-- Barcelona -->
@@ -82,8 +82,8 @@
                             </image>
                         </ImageView>
                         <Text>Barcelona 2008-2009</Text>
-                        <Button onAction="#carritoBarcelona" text="Carrito" />
-                        <Button onAction="#favoritoBarcelona" text="Favoritos" />
+                        <Button onAction="#carritoBarcelona" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoBarcelona" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
                 </HBox>
 
@@ -97,8 +97,8 @@
                             </image>
                         </ImageView>
                         <Text>United 2002-2004</Text>
-                        <Button onAction="#carritoUnited" text="Carrito" />
-                        <Button onAction="#favoritoUnited" text="Favoritos" />
+                        <Button onAction="#carritoUnited" prefHeight="26.0" prefWidth="132.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoUnited" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                     <!-- Real Madrid -->
@@ -109,13 +109,13 @@
                             </image>
                         </ImageView>
                         <Text>Real Madrid 2011-2012</Text>
-                        <Button onAction="#carritoMilan" text="Carrito" />
-                        <Button onAction="#favoritoMilan" text="Favoritos" />
+                        <Button onAction="#carritoMilan" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoMilan" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
                 </HBox>
 
                 <!-- FILA 4 -->
-                <HBox spacing="20">
+                <HBox prefHeight="58.0" prefWidth="318.0" spacing="20">
                     <!-- Milan -->
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
                         <ImageView fitHeight="120" fitWidth="120">
@@ -124,8 +124,8 @@
                             </image>
                         </ImageView>
                         <Text>Milan 2006-2007</Text>
-                        <Button onAction="#carritoMilan" text="Carrito" />
-                        <Button onAction="#favoritoMilan" text="Favoritos" />
+                        <Button onAction="#carritoMilan" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoMilan" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                     <!-- City -->
@@ -136,8 +136,8 @@
                             </image>
                         </ImageView>
                         <Text>City 1997-1998</Text>
-                        <Button onAction="#carritoCity" text="Carrito" />
-                        <Button onAction="#favoritoCity" text="Favoritos" />
+                        <Button onAction="#carritoCity" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoCity" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
                 </HBox>
 
@@ -145,13 +145,13 @@
         </content>
     </ScrollPane>
 
-    <TextField fx:id="txtBuscar" layoutX="77" layoutY="26" prefHeight="27" prefWidth="257" promptText="Buscar clubes..." style="-fx-background-color:#D3D3D3; -fx-border-color:transparent;" />
+    <TextField fx:id="txtBuscar" layoutX="77" layoutY="26" prefHeight="27" prefWidth="257" promptText="Buscar clubes..." style="-fx-background-color: white; -fx-border-color: transparent;" />
 
-    <Button layoutX="206" layoutY="114" onAction="#irASelecciones" style="-fx-background-color:#D3D3D3;" text="Ver Selecciones" />
+    <Button layoutX="180.0" layoutY="113.0" onAction="#irASelecciones" style="-fx-background-color:#D3D3D3;" text="Ver Selecciones" />
     
             <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-   <Button layoutX="24.0" layoutY="70.0" mnemonicParsing="false" text="Filtro " />
-   <Button layoutX="92.0" layoutY="70.0" mnemonicParsing="false" text="Clasificar" />
+   <Button layoutX="20.0" layoutY="70.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #D3D3D3;" text="Filtro " />
+   <Button layoutX="92.0" layoutY="70.0" mnemonicParsing="false" style="-fx-background-color: #D3D3D3;" text="Clasificar" />
 
 
 </AnchorPane>

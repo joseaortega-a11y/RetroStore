@@ -25,7 +25,7 @@
     </Text>
 
     <!-- CONTENEDOR GENERAL -->
-    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="20.0" layoutY="154.0" prefHeight="406.0" prefWidth="320">
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="20.0" layoutY="154.0" prefHeight="433.0" prefWidth="320">
         <content>
             <VBox fx:id="contenedorSeleccion" spacing="20">
 
@@ -38,8 +38,8 @@
                             <image><Image url="@../imagenes/portugal.png" /></image>
                         </ImageView>
                         <Text>Portugal 2002</Text>
-                        <Button onAction="#carritoPortugal" prefHeight="26.0" prefWidth="62.0" text="Carrito" />
-                        <Button onAction="#favoritoPortugal" text="Favoritos" />
+                        <Button onAction="#carritoPortugal" prefHeight="26.0" prefWidth="129.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoPortugal" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                     <!-- Brasil -->
@@ -48,14 +48,14 @@
                             <image><Image url="@../imagenes/brazil.png" /></image>
                         </ImageView>
                         <Text>Brasil 2002</Text>
-                        <Button onAction="#carritoBrasil" prefHeight="26.0" prefWidth="66.0" text="Carrito" />
-                        <Button onAction="#favoritoBrasil" text="Favoritos" />
+                        <Button onAction="#carritoBrasil" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoBrasil" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                 </HBox>
 
                 <!-- FILA 2 -->
-                <HBox prefHeight="182.0" prefWidth="305.0" spacing="20">
+                <HBox prefHeight="184.0" prefWidth="305.0" spacing="20">
 
                     <!-- Francia -->
                     <VBox prefWidth="140" spacing="5" style="-fx-background-color:#f9f9f9; -fx-padding:10; -fx-background-radius:10;">
@@ -63,8 +63,8 @@
                             <image><Image url="@../imagenes/francia.png" /></image>
                         </ImageView>
                         <Text>Francia 2006</Text>
-                        <Button onAction="#carritoFrancia" text="Carrito" />
-                        <Button onAction="#favoritoFrancia" text="Favoritos" />
+                        <Button onAction="#carritoFrancia" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoFrancia" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                     <!-- Argentina -->
@@ -73,8 +73,8 @@
                             <image><Image url="@../imagenes/argentina.png" /></image>
                         </ImageView>
                         <Text>Argentina 2006</Text>
-                        <Button onAction="#carritoArgentina" text="Carrito" />
-                        <Button onAction="#favoritoArgentina" text="Favoritos" />
+                        <Button onAction="#carritoArgentina" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoArgentina" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                 </HBox>
@@ -88,8 +88,8 @@
                             <image><Image url="@../imagenes/alemania.png" /></image>
                         </ImageView>
                         <Text>Alemania 2006</Text>
-                        <Button onAction="#carritoAlemania" text="Carrito" />
-                        <Button onAction="#favoritoAlemania" text="Favoritos" />
+                        <Button onAction="#carritoAlemania" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoAlemania" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                     <!-- Italia -->
@@ -98,8 +98,8 @@
                             <image><Image url="@../imagenes/italia.png" /></image>
                         </ImageView>
                         <Text>Italia 1996</Text>
-                        <Button onAction="#carritoItalia" text="Carrito" />
-                        <Button onAction="#favoritoItalia" text="Favoritos" />
+                        <Button onAction="#carritoItalia" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoItalia" prefHeight="26.0" prefWidth="202.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                 </HBox>
@@ -113,8 +113,8 @@
                             <image><Image url="@../imagenes/spain.png" /></image>
                         </ImageView>
                         <Text>España 2006</Text>
-                        <Button onAction="#carritoEspana" text="Carrito" />
-                        <Button onAction="#favoritoEspana" text="Favoritos" />
+                        <Button onAction="#carritoEspana" prefHeight="26.0" prefWidth="140.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoEspana" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                     <!-- Croacia -->
@@ -123,8 +123,8 @@
                             <image><Image url="@../imagenes/croacia.png" /></image>
                         </ImageView>
                         <Text>Croacia 1996</Text>
-                        <Button onAction="#carritoCroacia" text="Carrito" />
-                        <Button onAction="#favoritoCroacia" text="Favoritos" />
+                        <Button onAction="#carritoCroacia" prefHeight="26.0" prefWidth="137.0" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" />
+                        <Button onAction="#favoritoCroacia" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: black;" text="Favoritos" textFill="WHITE" />
                     </VBox>
 
                 </HBox>
