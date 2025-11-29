@@ -1,15 +1,5 @@
-
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
-/**
- *
- * @author Josea
- */
 public class Producto {
 
     private String id;
@@ -23,7 +13,7 @@ public class Producto {
     public Producto() {}
 
     public Producto(String id, String nombre, String descripcion, String categoria,
-                    String pais, int anio, double precio, String imagen) {
+                    int anio, double precio, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;

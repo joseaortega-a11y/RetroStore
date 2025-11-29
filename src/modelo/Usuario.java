@@ -11,10 +11,9 @@ public class Usuario {
     private String contrasena;
     private String rol;
 
-    // Listas del usuario
     private List<Producto> favoritos = new ArrayList<>();
-    private List<Compra> historial = new ArrayList<>();
     private List<Producto> carrito = new ArrayList<>();
+    private List<Compra> historial = new ArrayList<>();
 
     public Usuario() {}
 
@@ -38,12 +37,10 @@ public class Usuario {
     public void setContrasena(String contrasena) { this.contrasena = contrasena; }
     public void setRol(String rol) { this.rol = rol; }
 
-    // --------------------------
+    // -------------------------------
     // FAVORITOS
-    // --------------------------
-    public List<Producto> getFavoritos() {
-        return favoritos;
-    }
+    // -------------------------------
+    public List<Producto> getFavoritos() { return favoritos; }
 
     public void agregarFavorito(Producto p) {
         if (!favoritos.contains(p)) favoritos.add(p);
@@ -53,23 +50,10 @@ public class Usuario {
         favoritos.remove(p);
     }
 
-    // --------------------------
-    // HISTORIAL
-    // --------------------------
-    public List<Compra> getHistorial() {
-        return historial;
-    }
-
-    public void agregarCompra(Compra compra) {
-        historial.add(compra);
-    }
-
-    // --------------------------
+    // -------------------------------
     // CARRITO
-    // --------------------------
-    public List<Producto> getCarrito() {
-        return carrito;
-    }
+    // -------------------------------
+    public List<Producto> getCarrito() { return carrito; }
 
     public void agregarAlCarrito(Producto p) {
         carrito.add(p);
@@ -81,5 +65,14 @@ public class Usuario {
 
     public void limpiarCarrito() {
         carrito.clear();
+    }
+
+    // -------------------------------
+    // HISTORIAL
+    // -------------------------------
+    public List<Compra> getHistorial() { return historial; }
+
+    public void agregarCompra(Compra compra) {
+        historial.add(compra);
     }
 }
