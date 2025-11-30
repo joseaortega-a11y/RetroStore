@@ -1,61 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="646.0" prefWidth="343.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.HistorialController">
    <children>
-      <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="38.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/casa.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="157.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/carrito.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="218.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/historial.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="99.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/imagenes/fav.png" />
-         </image>
-      </ImageView>
       <Text layoutX="14.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mis compras:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <TextField fx:id="txtBuscar" layoutX="60.0" layoutY="25.0" prefWidth="250" promptText="Buscar favoritos..." />
+
+      <TextField fx:id="txtBuscar" layoutX="60.0" layoutY="25.0" prefWidth="250" promptText="Buscar en el historial..." />
       <HBox layoutX="14.0" layoutY="18.0" prefHeight="0.0" prefWidth="0.0" spacing="10" style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 10;">
          <children>
-            <ImageView fitHeight="20" fitWidth="20">
+           
+         </children>
+      </HBox>
+
+      <ScrollPane layoutX="19.0" layoutY="131.0" prefHeight="447.0" prefWidth="303.0">
+         <content>
+            <ListView fx:id="listaHistorial" prefHeight="422.0" prefWidth="302.0" />
+         </content>
+      </ScrollPane>
+
+    
+      <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox layoutX="24.0" layoutY="25.0" prefHeight="27.0" prefWidth="32.0">
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/Busqueda.png" />
                </image>
             </ImageView>
          </children>
       </HBox>
-      <ScrollPane layoutX="19.0" layoutY="131.0" prefHeight="447.0" prefWidth="303.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="302.0">
-               <children>
-                  <VBox prefHeight="426.0" prefWidth="303.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
    </children>
 </AnchorPane>

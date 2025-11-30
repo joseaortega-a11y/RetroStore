@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -12,18 +14,14 @@
 
 <AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="361.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CarritoController">
    <children>
-      <Text layoutX="30.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu carrito:">
+      <Text layoutX="14.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu carrito:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Button layoutX="43.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
-      <Button layoutX="102.0" layoutY="510.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
-      <Button layoutX="223.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
-      <Button layoutX="164.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" />
-      <Button layoutX="34.0" layoutY="536.0" mnemonicParsing="false" style="-fx-padding: 5 20 5 20; -fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="Continuar compra" textAlignment="CENTER" textFill="WHITE" />
-   <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+
       <TextField fx:id="txtBuscar" layoutX="56.0" layoutY="28.0" prefHeight="27" prefWidth="257" promptText="Buscar en el carrito" style="-fx-background-color: white; -fx-border-color: black;" />
+
       <HBox layoutX="14.0" layoutY="22.0" prefHeight="43.0" prefWidth="38.0" spacing="10" style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 10;">
          <children>
             <ImageView fitHeight="20" fitWidth="20">
@@ -33,11 +31,20 @@
             </ImageView>
          </children>
       </HBox>
-      <ScrollPane layoutX="13.0" layoutY="136.0" prefHeight="380.0" prefWidth="340.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="283.0" prefWidth="291.0" />
-        </content>
+
+      <ScrollPane fx:id="scrollCarrito" layoutX="13.0" layoutY="136.0" prefHeight="380.0" prefWidth="340.0">
+         <content>
+            <ListView fx:id="listaCarrito" prefHeight="380.0" prefWidth="340.0" />
+         </content>
       </ScrollPane>
-      <Button layoutX="196.0" layoutY="536.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="Eliminar compra" textFill="WHITE" />
+
+      <Label fx:id="lblTotal" layoutX="14.0" layoutY="530.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Total: $0.0" />
+
+      <Button fx:id="btnContinuarCompra" layoutX="34.0" layoutY="560.0" mnemonicParsing="false" style="-fx-padding: 5 20 5 20; -fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="Continuar compra" textAlignment="CENTER" textFill="WHITE" />
+
+      <Button fx:id="btnEliminarCompra" layoutX="196.0" layoutY="560.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="Eliminar compra" textFill="WHITE" />
+
+      <fx:include fx:id="barraNav" source="BarraNavegacion.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+
    </children>
 </AnchorPane>

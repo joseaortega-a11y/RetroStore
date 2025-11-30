@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package controlador;
 
 import javafx.fxml.FXML;
@@ -13,55 +9,41 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import modelo.Sesion;
+import modelo.Usuario;
 
 public class LoginController {
 
-    @FXML
-    private TextField txtId;
+    @FXML private TextField txtId;
+    @FXML private TextField txtCorreo;
+    @FXML private TextField txtApodo;
+    @FXML private TextField txtContra;
+    @FXML private Button btnUsuario;
+    @FXML private Button btnAdmin;
 
-    @FXML
-    private TextField txtCorreo;
-
-    @FXML
-    private TextField txtApodo;
-
-    @FXML
-    private TextField txtContra;
-
-    @FXML
-    private Button btnUsuario;
-
-    @FXML
-    private Button btnAdmin;
-
-    @FXML
-    private void initialize() {
-        // Para debug opcional
-        System.out.println("LoginController inicializado.");
-    }
-
-    // Evento botón "Usuario"
-  
     @FXML
     private void onUsuario(ActionEvent event) {
         if (!validarCampos()) return;
 
-        
+        // Crear usuario y asignar a sesión
+        Usuario usuario = new Usuario(
+                txtId.getText(),
+                txtCorreo.getText(),
+                txtApodo.getText(),
+                txtContra.getText(),
+                "Usuario"
+        );
+       Sesion.setUsuarioActual(usuario); // clave
+
         mostrarInfo("Inicio de sesión", "Inicio de sesión como Usuario exitoso.");
-              cambiarVentana("/vista/seleccion.fxml", "Retro Store - Catálogo");
+        cambiarVentana("/vista/seleccion.fxml", "Retro Store - Catálogo");
     }
 
-   
-    // Evento botón "Admin"
-   
     @FXML
     private void onAdmin(ActionEvent event) {
         cambiarVentana("/vista/Admin.fxml", "Retro Store - Admin");
     }
 
-  
-    // Validación de campos
-  
     private boolean validarCampos() {
         if (txtId.getText().isEmpty() ||
             txtCorreo.getText().isEmpty() ||
@@ -74,9 +56,6 @@ public class LoginController {
         return true;
     }
 
- 
-    // Cambiar pantalla
-   
     private void cambiarVentana(String rutaFXML, String tituloVentana) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(rutaFXML));
@@ -85,7 +64,7 @@ public class LoginController {
             stage.setScene(new Scene(root));
             stage.show();
 
-            // Cerrar la ventana actual
+            // Cerrar ventana actual
             Stage actual = (Stage) btnUsuario.getScene().getWindow();
             actual.close();
 
@@ -95,9 +74,6 @@ public class LoginController {
         }
     }
 
-
-    // Alertas
-    
     private void mostrarError(String titulo, String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setHeaderText(null);

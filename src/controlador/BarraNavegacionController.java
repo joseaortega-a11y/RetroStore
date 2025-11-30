@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class BarraNavegacionController {
@@ -17,39 +16,39 @@ public class BarraNavegacionController {
     @FXML private Button btnHistorial;
     @FXML private Button btnUsuario;
 
-    private void cambiarVentana(String ruta) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource(ruta));
-            Stage ventana = (Stage) btnHome.getScene().getWindow();
-            ventana.setScene(new Scene(root));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+  private void cambiarVentana(String ruta, String titulo) {
+    try {
+        Parent root = FXMLLoader.load(getClass().getResource(ruta));
+        Stage ventana = (Stage) btnHome.getScene().getWindow();
+        ventana.setScene(new Scene(root));
+        ventana.setTitle(titulo);  
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+}
 
     @FXML
     private void irHome(ActionEvent e) {
-        cambiarVentana("/vista/seleccion.fxml");
+        cambiarVentana("/vista/seleccion.fxml", "RetroStore - Catálogo");
     }
 
     @FXML
     private void irFavoritos(ActionEvent e) {
-        cambiarVentana("/vista/Favoritos.fxml");
+        cambiarVentana("/vista/Favoritos.fxml", "RetroStore - Favoritos");
     }
 
     @FXML
     private void irCarrito(ActionEvent e) {
-        cambiarVentana("/vista/carrito.fxml");
+        cambiarVentana("/vista/carrito.fxml", "RetroStore - Carrito");
     }
 
     @FXML
     private void irHistorial(ActionEvent e) {
-        cambiarVentana("/vista/Historial.fxml");
+        cambiarVentana("/vista/Historial.fxml", "RetroStore - Historial");
     }
 
-
     @FXML
-  
-    private void irUsuario(ActionEvent e) { cambiarVentana("/vista/usuario.fxml"); }
-
+    private void irUsuario(ActionEvent e) {
+        cambiarVentana("/vista/usuario.fxml", "RetroStore - Perfil de Usuario");
+    }
 }

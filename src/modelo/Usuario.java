@@ -25,6 +25,7 @@ public class Usuario {
         this.rol = rol;
     }
 
+    
     public String getId() { return id; }
     public String getCorreo() { return correo; }
     public String getApodo() { return apodo; }
@@ -37,42 +38,21 @@ public class Usuario {
     public void setContrasena(String contrasena) { this.contrasena = contrasena; }
     public void setRol(String rol) { this.rol = rol; }
 
-    // -------------------------------
-    // FAVORITOS
-    // -------------------------------
+   
     public List<Producto> getFavoritos() { return favoritos; }
-
     public void agregarFavorito(Producto p) {
         if (!favoritos.contains(p)) favoritos.add(p);
     }
+    public void quitarFavorito(Producto p) { favoritos.remove(p); }
 
-    public void quitarFavorito(Producto p) {
-        favoritos.remove(p);
-    }
-
-    // -------------------------------
-    // CARRITO
-    // -------------------------------
+   
     public List<Producto> getCarrito() { return carrito; }
+    public void agregarAlCarrito(Producto p) { carrito.add(p); }
+    public void quitarDelCarrito(Producto p) { carrito.remove(p); }
+    public void limpiarCarrito() { carrito.clear(); }
 
-    public void agregarAlCarrito(Producto p) {
-        carrito.add(p);
-    }
-
-    public void quitarDelCarrito(Producto p) {
-        carrito.remove(p);
-    }
-
-    public void limpiarCarrito() {
-        carrito.clear();
-    }
-
-    // -------------------------------
-    // HISTORIAL
-    // -------------------------------
+   
     public List<Compra> getHistorial() { return historial; }
-
-    public void agregarCompra(Compra compra) {
-        historial.add(compra);
-    }
+    public void agregarCompra(Compra compra) { historial.add(compra); }
 }
+
